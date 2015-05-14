@@ -1,0 +1,1 @@
+execVM "scripts\armory.sqf"; 

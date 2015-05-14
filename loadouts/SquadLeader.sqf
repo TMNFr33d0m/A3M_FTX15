@@ -1,0 +1,55 @@
+comment "Exported from Arsenal by SSG Lucht";
+Soldado = _this select 0; 
+comment "Remove existing items";
+removeAllWeapons Soldado;
+removeAllItems Soldado;
+removeAllAssignedItems Soldado;
+removeUniform Soldado;
+removeVest Soldado;
+removeBackpack Soldado;
+removeHeadgear Soldado;
+removeGoggles Soldado;
+
+comment "Add containers";
+Soldado forceAddUniform "rhs_uniform_cu_ocp_patchless";
+for "_i" from 1 to 3 do {Soldado addItemToUniform "AGM_CableTie";};
+Soldado addItemToUniform "AGM_MapTools";
+for "_i" from 1 to 6 do {Soldado addItemToUniform "AGM_Bandage";};
+Soldado addItemToUniform "AGM_Morphine";
+Soldado addItemToUniform "AGM_EarBuds";
+Soldado addItemToUniform "30Rnd_556x45_Stanag";
+for "_i" from 1 to 2 do {Soldado addItemToUniform "SmokeShellGreen";};
+Soldado addItemToUniform "SmokeShellBlue";
+Soldado addVest "rhsusf_iotv_ocp_Squadleader";
+for "_i" from 1 to 5 do {Soldado addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 2 do {Soldado addItemToVest "30Rnd_556x45_Stanag_Tracer_Red";};
+for "_i" from 1 to 2 do {Soldado addItemToVest "SUPER_flash";};
+Soldado addItemToVest "SmokeShell";
+Soldado addBackpack "B_Kitbag_cbr";
+Soldado addItemToBackpack "NVGoggles";
+for "_i" from 1 to 2 do {Soldado addItemToBackpack "tf_microdagr";};
+Soldado addItemToBackpack "HandGrenade";
+for "_i" from 1 to 3 do {Soldado addItemToBackpack "SUPER_flash";};
+Soldado addItemToBackpack "SmokeShellRed";
+for "_i" from 1 to 2 do {Soldado addItemToBackpack "SmokeShell";};
+Soldado addItemToBackpack "SmokeShellBlue";
+for "_i" from 1 to 2 do {Soldado addItemToBackpack "SmokeShellPurple";};
+Soldado addHeadgear "rhsusf_ach_helmet_headset_ocp";
+Soldado addGoggles "G_Lowprofile";
+
+comment "Add weapons";
+Soldado addWeapon "rhs_weap_m4_grip";
+Soldado addPrimaryWeaponItem "rhsusf_acc_anpeq15";
+Soldado addPrimaryWeaponItem "rhsusf_acc_ACOG";
+Soldado addWeapon "AGM_Vector";
+
+comment "Add items";
+Soldado linkItem "ItemMap";
+Soldado linkItem "ItemCompass";
+Soldado linkItem "ItemWatch";
+Soldado linkItem "tf_anprc152_1";
+Soldado linkItem "ItemcTab";
+
+comment "Set identity";
+Soldado setFace "WhiteHead_06";
+Soldado setSpeaker "Male01ENGVR";

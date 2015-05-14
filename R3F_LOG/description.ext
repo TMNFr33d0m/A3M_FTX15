@@ -1,0 +1,44 @@
+// Fr33d0m's Description.ext
+// Riding with the 327th Infantry Regiment (101st Airborne Division) 327thinf.enjin.com/
+// No Slack 
+
+class Header
+{
+	gameType = Sandbox;
+	minPlayers = 1;
+	maxPlayers = 38;
+};
+
+author = "S4 Team 327th Infantry 101st Airborne";
+OnLoadName = "Sangin, Afghn"; 
+OnLoadMission = "327th INF Sangin Deployment";  
+OnLoadMissionTime = 1; 
+loadscreen = "images\outimg.jpg"; 
+Respawn = 3; 
+respawnDelay = 30; 
+respawnTemplates[] = {"MenuPosition","Spectator"}; 
+respawnTemplatesWest[] = {"MenuPosition"};
+
+disabledAI = 1;
+showMap = 1;
+disableChannels[]={0,6};
+enableDebugConsole = 1;
+
+#include "VAS\menu.hpp"
+#include "R3F_LOG\desc_include.h"	
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};
+
+class params 
+{
+class HeadlessClient
+	{
+	title = "Headless Client";
+	values[]= {0,1}; 
+	texts[] = {"OFF","ON"}; 
+	default = 0; 
+	}; 
+}; 
